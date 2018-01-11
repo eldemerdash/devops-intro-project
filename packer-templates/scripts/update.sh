@@ -1,8 +1,7 @@
 #!/bin/bash -eux
+export DEBIAN_FRONTEND=noninteractive
 
-apt-get update
-
-apt-get -y upgrade
+apt-get upgrade -yq
 
 # ensure the correct kernel headers are installed
 apt-get -y install linux-headers-$(uname -r)
